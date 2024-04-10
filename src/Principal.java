@@ -1,16 +1,32 @@
-import com.alurajrh.screenmatch.modelo.Pelicula;
+import com.alurajrh.screenmatch.modelos.Pelicula;
+import com.alurajrh.screenmatch.modelos.Serie;
+
+import java.text.MessageFormat;
+
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("La familia del futuro");
-        miPelicula.setFechaDeLanzamiento(2007);
-        miPelicula.setDuracionEnMinutos(95);
-        miPelicula.setIncluidoEnElPlan(true);
+        Pelicula mejorImposible = new Pelicula();
+        mejorImposible.setNombre("Mejor imposible");
+        mejorImposible.setDirector("Guillermo del Toro");
+        mejorImposible.setFechaDeLanzamiento(2007);
+        mejorImposible.setDuracionEnMinutos(95);
+        mejorImposible.setIncluidoEnElPlan(true);
 
-        miPelicula.muestraFichaTecnica();
-        miPelicula.evalua(10);
-        miPelicula.evalua(10);
-        miPelicula.evalua(7.8);
-        System.out.println("Média de evaluaciones de la película: " +miPelicula.calculaMedia());
+        mejorImposible.muestraFichaTecnica();
+        mejorImposible.evalua(10);
+        mejorImposible.evalua(10);
+        mejorImposible.evalua(7.8);
+        System.out.println(MessageFormat.format("Média de evaluaciones de la película: {0}", mejorImposible.calculaMedia()));
+
+        Serie anneE = new Serie();
+        anneE.setNombre("Anne with an E");
+        anneE.setFechaDeLanzamiento(2021);
+        anneE.getEpisodiosPorTemporadas(10);
+        anneE.setMinutosPorTemporada(180);
+        anneE.setIncluidoEnElPlan(true);
+
+        anneE.muestraFichaTecnica();
+
+
     }
 }

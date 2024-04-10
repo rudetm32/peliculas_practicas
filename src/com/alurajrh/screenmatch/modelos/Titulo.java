@@ -1,6 +1,6 @@
-package com.alurajrh.screenmatch.modelo;
+package com.alurajrh.screenmatch.modelos;
 
-public class Pelicula{
+public class Titulo {
     private String nombre;
     private int fechaDeLanzamiento;
     private int duracionEnMinutos;
